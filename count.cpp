@@ -7,8 +7,6 @@ int num(char a[20])
 		t=a[i];
 		if(t>='0'&&t<='9')
 			count++;
-		else
-			return -1;
 	}
 	return count;
 }
@@ -20,9 +18,7 @@ int main()
 	scanf("%s %s",a1,a2);
 	na1=num(a1);
 	na2=num(a2);
-	if(na1==-1||na2==-1)
-		printf("\nInvalid Input!");
-	else if(na1==na2)
+	if(na1==na2)
 		printf("\nEqual");
 	else
 		printf("\nUnequal");
