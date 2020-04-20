@@ -30,8 +30,8 @@ int main()
 	hash(a);
 	printf("\nEnter the target ");
 	scanf("%d",&t);
-	for(i=0;i<size;i++)
-		printf("\n%5d%5d%5d",i,a[i],h[i]);
+	//for(i=0;i<size;i++)
+	//	printf("\n%5d%5d%5d",i,a[i],h[i]);
 	for(i=0;i<n;i++)
 	{
 		var=t-a[i];
