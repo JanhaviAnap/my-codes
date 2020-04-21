@@ -3,7 +3,7 @@
 int h[size];
 void hash(int *a,int i)
 {
-	if(h[(a[i]%199)]==-1)
+	if(h[(a[i]0%199]==-1)
 		h[(a[i])%199]=i;
 }
 int main()
