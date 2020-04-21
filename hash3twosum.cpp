@@ -27,7 +27,7 @@ int main()
 	{
 		conj=t-a[i];
 		hash(a,i);
-		if(a[h[conj%199]]+a[i]==t)
+		if((a[h[conj%199]]+a[i]==t)&&(h[conj%199]>=0))
 		{
 			printf("\nSolution=[%d,%d]",h[conj%199],i);
 		}
