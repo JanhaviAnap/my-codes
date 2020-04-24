@@ -1,15 +1,9 @@
 #include<stdio.h>
 int h[200];
-int hash(int *a,int n,int t)
+int hash(int *a,int n)
 {
-    int pos;
 	for(int i=0;i<n;i++)
-	{
-		h[a[i]]=a[i];
-		if(t==a[i])
-			pos=i;
-	}
-	return pos;	
+		h[a[i]]=i;	
 }
 int main(void)
 {
@@ -21,15 +15,17 @@ int main(void)
         scanf("%d",&a[i]);
     printf("\nEnter the element to be searched: ");
     scanf("%d",&t);
-    int pos=hash(a,n,t);
-    if(h[t]==t)
+    for(i=0;i<200;i++)
+    	h[i]=-1;
+    hash(a,n);
+    if(h[t]!=-1)
     {
-    	printf("\nElement found at position: [%d]",pos);
+    	printf("\nElement found at position: [%d]",h[t]);
     	c++;
 	}
 	if(c==0)
 		printf("\nElement not found ");
-    for(i=0;i<200;i++)
-        printf("\t%3d%3d",i,h[i]);
+//    for(i=0;i<200;i++)
+//        printf("\t%3d%3d",i,h[i]);
     return 0;
 }
