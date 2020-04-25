@@ -1,6 +1,6 @@
 #include<stdio.h>
 int h[200];
-int hash(int *a,int n)
+void hash(int *a,int n)
 {
 	for(int i=0;i<n;i++)
 		h[a[i]]=i;	
